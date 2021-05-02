@@ -9,3 +9,5 @@ git reset --hard HEAD~1
 
 git reset --hard 版本号   回退到此版本
 ```
+## 合并
+-- git merge 分支名称(两个分支合并)
