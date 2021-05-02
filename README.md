@@ -13,3 +13,5 @@ git reset --hard 版本号   回退到此版本
 -- 新建分支  git checkout -b 分支名称
 -- 切换分支  git checkout 分支名称
 -- 删除分支  git chenckout -d 分支名称
+## 合并
+-- git merge 分支名称(两个分支合并)
