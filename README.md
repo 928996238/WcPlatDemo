@@ -1,3 +1,4 @@
+# Git日常
 ## git提交
 ```
 git add
@@ -34,15 +35,20 @@ git diff HEAD  比较工作区和本地库最后一次commit的区别
 ```
 
 ## 分支
--- 查看分支  git branch
--- 新建并切换分支  git checkout -b 分支名称
--- 新建分支  git branch 分支名称
--- 切换分支  git checkout 分支名称
--- 删除本地分支  git branch -d 分支名称
--- 删除远程分支  git push -d 分支名称
+```
+查看分支  git branch
+新建并切换分支  git checkout -b 分支名称
+新建分支  git branch 分支名称
+切换分支  git checkout 分支名称
+删除本地分支  git branch -d 分支名称
+删除远程分支  git push -d 分支名称
+```
 
 ## 合并
--- git merge 分支名称(当前分支和指令分支 两个分支合并)
+```
+git merge 分支名称(当前分支和指令分支 两个分支合并)
+```
+
 
 ## 拉取代码
 ```
