@@ -54,3 +54,50 @@ vm.$watch("msg",function(){
 > computed 多个数据变化 影响同一个数据
 > watch    一个数据变化  影响多个数据
 > computed 不支持异步  watch  可以异步执行
+
+## vue发送请求  vue-resource  (不用依赖 jquery  的ajax了)
+* 引入 vue-resource
+* 返回Promiase对象
+> vue-resource 依赖vue  必须在vue引入之后才能引入  会挂载到vue实例对象上  一个$http 方法
+```
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+```
+
+## Axios 发送http请求
+* 引入 Axios  函数  axios()
+* 返回Promiase对象
+```
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
+* 常规使用方法
+```
+axios({
+  method: 'get', // post、get、put....
+  baseURL: '', // 请求的域名，基本地址
+  url: '', // 请求的路径
+  params: {}, // 会将请求参数拼接在url上
+  data: {}, // 会将请求参数放在请求体中
+  headers: {}, // 设置请求头，例如设置token等
+  timeout: 1000, // 设置请求超时时长，单位：ms
+})
+```
+* 简化别名
+> axios.get("wechat/getcode",{
+>    baseURL:'www....com',
+>    params:{
+>       id:'',
+>       name:''
+>   }
+> })   
+> axios.post("",{},{
+>     baseURL:'',
+> })
+* axios.all() 处理并发
+```
+axios.all([
+    axios.get('/a'),
+    axios.get('/b'),
+    axios.get('/c')
+]).then( axios.spread( (res1,res2,res3) => {} ))
+```
+

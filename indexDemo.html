@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>侦听器watch</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 
 </head>
 
@@ -24,7 +24,20 @@
 
         },
         methods: {
+            log(res) {
+                console.log(res);
+            },
+            test() {
+                // this.$http.get("https://developer.duyiedu.com/vue/getUserInfo")
+                //     .then(res => console.log(res));
 
+                this.$http.jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su", {
+                    params: {
+                        wd: "我的天"
+                    },
+                    jsonp: "cb"
+                }).then(res => console.log(res));
+            }
         },
         computed: {
 
