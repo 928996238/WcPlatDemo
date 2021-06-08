@@ -100,4 +100,9 @@ axios.all([
     axios.get('/c')
 ]).then( axios.spread( (res1,res2,res3) => {} ))
 ```
+* 拦截器 interceptors
+> 请求拦截器
+```
+
+```
 
