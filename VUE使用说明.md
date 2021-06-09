@@ -101,8 +101,21 @@ axios.all([
 ]).then( axios.spread( (res1,res2,res3) => {} ))
 ```
 * 拦截器 interceptors
-> 请求拦截器
+> 请求拦截器  响应拦截器  等等等等
+```
+见文档 26
 ```
 
+## template  选项
+* template优先于 el
 ```
+const vm = new Vue({
+  el: '#app',
+  template: `
+    <div id="ceshi">xxx</div>
+  `,
+})
+```
+
+## VUE生命周期
 
