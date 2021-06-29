@@ -118,4 +118,19 @@ const vm = new Vue({
 ```
 
 ## VUE生命周期
+* 先创建一个实例 然后校验data数据绑定  然后看是否有el 没有的话就调用vm.$mount,有就去看看有没有template 有的话优先template  没有的话编译 el对应的元素  然后挂载到vm实例对象  然后根据虚拟DOM渲染页面
+* 创建 挂载 更新 销毁
+```
+beforeCreate(){}
+created(){}
+
+beforeMount(){}
+mounted(){}
+
+beforeUpdate(){}
+updated(){}
+
+beforeDestroy(){}
+destroyed(){}
+```
 
