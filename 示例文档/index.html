@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <My-Button></My-Button>
+            <My-Button></My-Button>
+            <My-Button></My-Button>
+            <My-Title title="标题111"></My-Title>
+        </div>
+    </div>
+
+    <script>
+        var MyButton = {
+            data() {
+                return {
+                    count: 0
+                }
+            },
+            template: `<button @click="count++">当前点击了{{count}}次</button>`
+        }
+
+        var MyTitle = {
+            props: ["title"],
+            template: `<h1>{{title}}</h1>`
+        }
+
+        // Vue.component("MyButton", MyButton);
+
+        var vm = new Vue({
+            components: {
+                MyButton,
+                MyTitle
+            },
+            el: "#app",
+            data: {
+
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
